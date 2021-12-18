@@ -1,4 +1,6 @@
 import './App.css';
+import React, { useState } from 'react';
+import { useSpring, animated } from 'react-spring'
 import Navbar from './Navbar';
 
 import bg from './images/red-blue-waves.jpg';
@@ -6,6 +8,7 @@ import bg from './images/red-blue-waves.jpg';
 
 
 function App() {
+
   return (
     <div className="App">
 
@@ -17,7 +20,7 @@ function App() {
         className='home-bg'
       />
 
-      <div className='home-bg-blur' />
+      <animated.div className='home-bg-blur' />
 
     </div>
   );
