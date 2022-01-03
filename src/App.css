@@ -25,20 +25,15 @@
   border: 1px solid rgba( 255, 255, 255, 0.2 );
 }
 
-.frosted-light-unrounded {
-  background-color: rgba(255, 255, 255, 0.65);
-  box-shadow: 0 8px 32px 0 rgba(10, 12, 43, 0.1);
-  backdrop-filter: blur( 25px );
-  -webkit-backdrop-filter: blur( 12px );
-  border-radius: 0px;
-  border: 1px solid rgba( 255, 255, 255, 0.2 );
-}
-
 
 /* Class-based */
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .App {
   width: 100%;
-  color: #fff;
   font-family: 'Poppins';
 }
 
@@ -48,6 +43,22 @@
   width: 100%;
   height: auto;
   z-index: 0;
+}
+
+.bg-white {
+  z-index: 0;
+}
+
+.bg-red {
+  z-index: 1;
+}
+
+.bg-gray {
+  z-index: 2;
+}
+
+.bg-black {
+  z-index: 3;
 }
 
 .home-block {
@@ -63,16 +74,13 @@
   overflow: hidden;
 }
 
-.home-block > span {
-  
-}
-
 .navbar {
   position: fixed;
   inset: 0;
   width: auto;
   height: 5%;
-  z-index: 1;
+  margin-top: 2rem;
+  z-index: 15;
   font-weight: 600;
   font-size: 1.3rem;
   letter-spacing: 1px;
@@ -92,7 +100,7 @@
   align-self: center;
   margin-left: 2rem;
   text-align: left;
-  color: rgb(37, 51, 73);
+  color: #000;
 }
 
 .hamburger {
@@ -100,6 +108,12 @@
   grid-row: 1/2;
   justify-self: center;
   align-self: center;
+  z-index: 20;
+}
+
+.circle {
+  position: absolute;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 1550px) {
