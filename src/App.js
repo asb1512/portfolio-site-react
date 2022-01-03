@@ -40,32 +40,52 @@ function App() {
     right: showMenu ? -100 : 0,
   })
 
+  const [bgColor, setBgColor] = useState('white');
+  const whiteStyle = useSpring({
+    opacity: bgColor === 'white' ? 1 : 0,
+  })
+  const redStyle = useSpring({
+    opacity: bgColor === 'red' ? 1 : 0,
+  })
+  const grayStyle = useSpring({
+    opacity: bgColor === 'gray' ? 1 : 0,
+  })
+  const blackStyle = useSpring({
+    opacity: bgColor === 'black' ? 1 : 0,
+  })
+
+
+
   return transitions(
     (styles, item) => item && <animated.div style={styles} className="App">
-      <Navbar setMenu={setMenu} showMenu={showMenu} />
+      <Navbar setMenu={setMenu} showMenu={showMenu} setBgColor={setBgColor} />
 
-      <img
+      <animated.img
         src={bgBlack}
         alt="Andrew Bourgeois – Full-Stack Developer"
         className='home-bg bg-black'
+        style={blackStyle}
       />
 
-      <img
+      <animated.img
         src={bgGray}
         alt="Andrew Bourgeois – Full-Stack Developer"
         className='home-bg bg-gray'
+        style={grayStyle}
       />
 
-      <img
+      <animated.img
         src={bgRed}
         alt="Andrew Bourgeois – Full-Stack Developer"
         className='home-bg bg-red'
+        style={redStyle}
       />
 
-      <img
+      <animated.img
         src={bgWhite}
         alt="Andrew Bourgeois – Full-Stack Developer"
         className='home-bg bg-white'
+        style={whiteStyle}
       />
 
       
