@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import { useTransition, useSpring, animated, config } from 'react-spring'
 import Navbar from './Navbar';
 
-import bg from './images/marbre-blanc.jpg';
+import bgWhite from './images/mountains-white.jpg';
+import bgRed from './images/mountains-red.jpg';
+import bgGray from './images/mountains-gray.jpg';
+import bgBlack from './images/mountains-black.jpg';
 
 
 
@@ -31,21 +34,41 @@ function App() {
     config: { delay: 4000 },
   });
 
-
+  const [showMenu, setMenu] = useState(false);
+  const circleMenuStyle = useSpring({
+    top: showMenu ? -100 : 0,
+    right: showMenu ? -100 : 0,
+  })
 
   return transitions(
     (styles, item) => item && <animated.div style={styles} className="App">
-      <Navbar />
+      <Navbar setMenu={setMenu} showMenu={showMenu} />
 
       <img
-        src={bg}
+        src={bgBlack}
         alt="Andrew Bourgeois – Full-Stack Developer"
-        className='home-bg'
+        className='home-bg bg-black'
       />
 
-      <animated.div className="home-block frosted" style={boxStyle}>
-        bringing <span>code</span> to life
-      </animated.div>
+      <img
+        src={bgGray}
+        alt="Andrew Bourgeois – Full-Stack Developer"
+        className='home-bg bg-gray'
+      />
+
+      <img
+        src={bgRed}
+        alt="Andrew Bourgeois – Full-Stack Developer"
+        className='home-bg bg-red'
+      />
+
+      <img
+        src={bgWhite}
+        alt="Andrew Bourgeois – Full-Stack Developer"
+        className='home-bg bg-white'
+      />
+
+      
     </animated.div>
   )
 }
