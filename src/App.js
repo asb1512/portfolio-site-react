@@ -27,18 +27,8 @@ function App() {
   });
 
   const [toggle, setToggle] = useState(false);
-  const boxStyle = useSpring({
-    width: toggle ? '80%' : '5%',
-    height: toggle ? '80%' : '5%',
-    opacity: toggle ? 1 : 0,
-    config: { delay: 4000 },
-  });
 
   const [showMenu, setMenu] = useState(false);
-  const circleMenuStyle = useSpring({
-    top: showMenu ? -100 : 0,
-    right: showMenu ? -100 : 0,
-  })
 
   const [bgColor, setBgColor] = useState('white');
   const whiteStyle = useSpring({
@@ -59,6 +49,10 @@ function App() {
   return transitions(
     (styles, item) => item && <animated.div style={styles} className="App">
       <Navbar setMenu={setMenu} showMenu={showMenu} setBgColor={setBgColor} />
+
+      <div className='tagline'>
+        Hello, <span>I'm</span> <span>Andrew Bourgeois</span>
+      </div>
 
       <animated.img
         src={bgBlack}
