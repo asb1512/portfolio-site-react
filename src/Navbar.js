@@ -8,7 +8,7 @@ export default function Navbar(props) {
 
   // animation for hamburger menu
   const [isOpen, setOpen] = useState(false)
-  const hamburgerStyle = useSpring({
+  const nameStyle = useSpring({
     opacity: isOpen ? 1 : 0,
     color: isOpen ? '#fff' : '#000',
   })
@@ -52,38 +52,48 @@ export default function Navbar(props) {
     delay: 300,
     opacity: isOpen ? 1 : 0,
     transform: isOpen ? 'translate(0px, 0px)' : 'translate(0px, 250px)',
-    color: hoverAbout ? '#FE3636' : '#FFF',
     config: {
       mass: 2,
       tension: 350,
       clamp: true,
     },
   })
+  const aboutHoverStyle = useSpring({
+    color: hoverAbout ? '#FE3636' : '#FFF',
+  })
+
   const projectsStyle = useSpring({
     delay: 400,
     opacity: isOpen ? 1 : 0,
     transform: isOpen ? 'translate(0px, 0px)' : 'translate(0px, 250px)',
-    color: hoverProjects ? '#BCBCBC' : '#FFF',
     config: {
       mass: 1,
       tension: 350
     },
   })
+  const projectsHoverStyle = useSpring({
+    color: hoverProjects ? '#BCBCBC' : '#FFF',
+  })
+
   const contactsStyle = useSpring({
     delay: 500,
     opacity: isOpen ? 1 : 0,
     transform: isOpen ? 'translate(0px, 0px)' : 'translate(0px, 250px)',
-    color: hoverContacts ? '#000' : '#FFF',
     config: {
       mass: 2,
       tension: 350
     },
   })
+  const contactsHoverStyle = useSpring({
+    color: hoverContacts ? '#000' : '#FFF',
+  })
+
+
 
   return (
     <>
       <div className='navbar'>
-        <animated.div className='navbar-left' style={hamburgerStyle}>
+        <animated.div className='navbar-left' style={nameStyle}>
           ANDREW BOURGEOIS <span>full-stack developer</span>
         </animated.div>
 
@@ -124,21 +134,21 @@ export default function Navbar(props) {
 
       <div className='menu-options'>
         <animated.p 
-          style={aboutStyle}
+          style={{...aboutStyle, ...aboutHoverStyle}}
           onMouseEnter={() => handleMouseEnter('red')}
           onMouseLeave={() => handleMouseLeave()}
         >
             about
         </animated.p>
         <animated.p 
-          style={projectsStyle}
+          style={{...projectsStyle, ...projectsHoverStyle}}
           onMouseEnter={() => handleMouseEnter('gray')}
           onMouseLeave={() => handleMouseLeave()}
         >
             projects
         </animated.p>
         <animated.p 
-          style={contactsStyle}
+          style={{...contactsStyle, ...contactsHoverStyle}}
           onMouseEnter={() => handleMouseEnter('black')}
           onMouseLeave={() => handleMouseLeave()}
         >
