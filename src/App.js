@@ -43,15 +43,26 @@ function App() {
   const blackStyle = useSpring({
     opacity: bgColor === 'black' ? 1 : 0,
   })
-
+  const nameStyle = useSpring({
+    color: bgColor === 'red' ? '#FFF' : '#FE3636',
+    
+  })
+  const taglineStyle = useSpring({
+    color: bgColor === 'black' ? '#FFF' : '#000',
+  })
 
 
   return transitions(
     (styles, item) => item && <animated.div style={styles} className="App">
       <Navbar setMenu={setMenu} showMenu={showMenu} setBgColor={setBgColor} />
 
-      <div className='tagline'>
-        Hello, <span>I'm</span> <span>Andrew Bourgeois</span>
+      <animated.div className='tagline' style={taglineStyle}>
+        Hello, <span>I'm</span> <animated.span style={nameStyle}>Andrew Bourgeois</animated.span><br />
+        <animated.span style={nameStyle}>a full-stack developer</animated.span>
+      </animated.div>
+
+      <div>
+        
       </div>
 
       <animated.img

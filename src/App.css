@@ -91,7 +91,6 @@ body {
 
 .navbar-left > span {
   font-weight: 200;
-  color: #BCBCBC;
 }
 
 .navbar-left {
@@ -101,7 +100,6 @@ body {
   align-self: center;
   margin-left: 2rem;
   text-align: left;
-  color: #000;
 }
 
 .hamburger {
@@ -137,11 +135,13 @@ body {
 .tagline {
   position: relative;
   display: block;
-  margin: 48vh 0 0 4rem;
+  height: 4.3rem;
+  margin: 46vh 0 0 4rem;
   font-family: 'GraphikBold';
   font-size: 4rem;
   color: #000;
   z-index: 100;
+  overflow: hidden;
 }
 
 .tagline > span:nth-child(1) {
@@ -149,6 +149,13 @@ body {
 }
 
 .tagline > span:nth-child(2) {
+  font-family: 'GraphikMedium';
+  color: #FE3636;
+  
+}
+
+.tagline > span:nth-child(4) {
+  margin-left: 12rem;
   font-family: 'GraphikMedium';
   color: #FE3636;
 }

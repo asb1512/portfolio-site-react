@@ -6,11 +6,19 @@ import { useSpring, animated } from 'react-spring';
 
 export default function Navbar(props) {
 
+  // animation for menu options
+  const [hoverAbout, setAbout] = useState(false);
+  const [hoverProjects, setProjects] = useState(false);
+  const [hoverContacts, setContacts] = useState(false);
+
   // animation for hamburger menu
   const [isOpen, setOpen] = useState(false)
   const nameStyle = useSpring({
     opacity: isOpen ? 1 : 0,
-    color: isOpen ? '#fff' : '#000',
+    color: hoverAbout ? '#FFF' : '#FE3636',
+  })
+  const fullStackStyle = useSpring({
+    color: hoverContacts ? '#FFF' : '#000',
   })
   const circleMenuStyle = useSpring({
     top: isOpen ? '0' : '-100',
@@ -18,11 +26,6 @@ export default function Navbar(props) {
     width: isOpen ? '35%' : '5%',
     fill: 'url(#grad)'
   })
-  
-  // animation for menu options
-  const [hoverAbout, setAbout] = useState(false);
-  const [hoverProjects, setProjects] = useState(false);
-  const [hoverContacts, setContacts] = useState(false);
 
   const handleMouseEnter = (color) => {
     switch (color) {
@@ -94,7 +97,7 @@ export default function Navbar(props) {
     <>
       <div className='navbar'>
         <animated.div className='navbar-left' style={nameStyle}>
-          ANDREW BOURGEOIS <span>full-stack developer</span>
+          ANDREW BOURGEOIS <animated.span style={fullStackStyle}>full-stack developer</animated.span>
         </animated.div>
 
         <Hamburger
