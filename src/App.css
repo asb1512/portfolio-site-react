@@ -132,32 +132,33 @@ body {
   cursor: pointer;
 }
 
-.tagline {
+.tagline-cntr {
   position: relative;
-  display: block;
-  height: 4.3rem;
+  display: grid;
+  grid-template-columns: 12% 88%;
+  grid-template-rows: 100%;
+  height: 4.4rem;
   margin: 46vh 0 0 4rem;
   font-family: 'GraphikBold';
   font-size: 4rem;
   color: #000;
-  z-index: 100;
+  z-index: 20;
   overflow: hidden;
 }
 
-.tagline > span:nth-child(1) {
+.tagline-hello {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.tagline-desc {
+  grid-column: 2/3;
+  grid-row: 1/2;
   font-family: 'GraphikRegular';
 }
 
-.tagline > span:nth-child(2) {
+.tagline-desc > span {
   font-family: 'GraphikMedium';
-  color: #FE3636;
-  
-}
-
-.tagline > span:nth-child(4) {
-  margin-left: 12rem;
-  font-family: 'GraphikMedium';
-  color: #FE3636;
 }
 
 @media only screen and (max-width: 1600px) {
