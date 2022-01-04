@@ -15,7 +15,7 @@ export default function Navbar(props) {
   const [isOpen, setOpen] = useState(false)
   const nameStyle = useSpring({
     opacity: isOpen ? 1 : 0,
-    color: hoverAbout ? '#FFF' : '#FE3636',
+    color: hoverAbout || hoverProjects ? '#FFF' : '#FE3636',
   })
   const fullStackStyle = useSpring({
     color: hoverContacts ? '#FFF' : '#000',
