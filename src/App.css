@@ -135,15 +135,14 @@ body {
 .tagline-cntr {
   position: relative;
   display: grid;
-  grid-template-columns: 12% 88%;
-  grid-template-rows: 100%;
-  height: 4.4rem;
+  grid-template-columns: 22% 78%;
+  width: 55%;
+  height: auto;
   margin: 46vh 0 0 4rem;
   font-family: 'GraphikBold';
   font-size: 4rem;
   color: #000;
   z-index: 20;
-  overflow: hidden;
 }
 
 .tagline-hello {
@@ -159,6 +158,18 @@ body {
 
 .tagline-desc > span {
   font-family: 'GraphikMedium';
+}
+
+.tagline-subdesc {
+  grid-column: 2/3;
+  grid-row: 2/2;
+  margin-top: 1rem;
+  padding: 1.4rem 1rem 0 1rem;
+  border-top: solid 1px #5F5F5F;
+  justify-self: center;
+  font-family: 'GraphikRegular';
+  font-size: 1.5rem;
+  letter-spacing: 15px;
 }
 
 @media only screen and (max-width: 1600px) {
