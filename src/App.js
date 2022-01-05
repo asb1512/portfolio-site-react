@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useTransition, useSpring, animated, config } from 'react-spring'
 import Navbar from './Navbar';
 import Tagline from './Tagline';
+import About from './About';
 
 import bgWhite from './images/mountains-white.jpg';
 import bgRed from './images/mountains-red.jpg';
@@ -45,13 +46,22 @@ function App() {
     opacity: bgColor === 'black' ? 1 : 0,
   })
 
+  const [showAbout, setAbout] = useState(false);
+  const renderAbout = () => {
+    if (showAbout) {
+      return <About />
+    } else return null
+  }
+
 
 
   return transitions(
     (styles, item) => item && <animated.div style={styles} className="App">
       <Navbar setBgColor={setBgColor} setTagline={setTagline} />
 
-      <Tagline bgColor={bgColor} showTagline={showTagline} />
+      <Tagline bgColor={bgColor} showTagline={showTagline} setAbout={setAbout} />
+
+      {renderAbout()}
 
       <animated.img
         src={bgBlack}

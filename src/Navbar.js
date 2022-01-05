@@ -101,6 +101,7 @@ export default function Navbar(props) {
     setClicked(1);
     setOpen(false);
     props.setTagline(false);
+    props.setAbout(true);
   }
 
 
@@ -146,6 +147,8 @@ export default function Navbar(props) {
           
         />
       </animated.svg>
+
+
 
       <div className='menu-options'>
         <animated.p 
