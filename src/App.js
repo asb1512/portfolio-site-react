@@ -29,7 +29,7 @@ function App() {
 
   const [toggle, setToggle] = useState(false);
 
-  const [showMenu, setMenu] = useState(false);
+  const [showTagline, setTagline] = useState(true);
 
   const [bgColor, setBgColor] = useState('white');
   const whiteStyle = useSpring({
@@ -49,9 +49,9 @@ function App() {
 
   return transitions(
     (styles, item) => item && <animated.div style={styles} className="App">
-      <Navbar setMenu={setMenu} showMenu={showMenu} setBgColor={setBgColor} />
+      <Navbar setBgColor={setBgColor} setTagline={setTagline} />
 
-      <Tagline bgColor={bgColor} toggle={toggle} />
+      <Tagline bgColor={bgColor} showTagline={showTagline} />
 
       <animated.img
         src={bgBlack}
