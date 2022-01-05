@@ -17,7 +17,15 @@ export default function About() {
       </p>
 
       <p>
-        
+        After my time abroad, I realized that I didn't want to pursue a career in academia and began to search for other opportunities. 
+      </p>
+
+      <p>
+        After some time, I ended up at a digiat marketing startup and quickly fell into graphic design.
+      </p>
+
+      <p>
+        Isn't it funny that as we age, despite our best efforts, we end up becoming more and more like out parents. My mother, an artist and graphic designer and my father, a teacher.
       </p>
     </div>
   )
