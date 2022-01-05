@@ -13,8 +13,10 @@ export default function Navbar(props) {
 
   // animation for hamburger menu
   const [isOpen, setOpen] = useState(false)
+  const [clicked, setClicked] = useState(0);
+  
   const nameStyle = useSpring({
-    opacity: isOpen ? 1 : 0,
+    opacity: isOpen || clicked === 1 ? 1 : 0,
     color: hoverAbout || hoverProjects ? '#FFF' : '#FE3636',
   })
   const fullStackStyle = useSpring({
@@ -28,27 +30,31 @@ export default function Navbar(props) {
   })
 
   const handleMouseEnter = (color) => {
-    switch (color) {
-      case 'red':
-        setAbout(true);
-        break;
-      case 'gray':
-        setProjects(true);
-        break;
-      case 'black':
-        setContacts(true);
-        break;
-      default:
-        break;
+    if (clicked === 0) {
+      switch (color) {
+        case 'red':
+          setAbout(true);
+          break;
+        case 'gray':
+          setProjects(true);
+          break;
+        case 'black':
+          setContacts(true);
+          break;
+        default:
+          break;
+      }
+      props.setBgColor(color);
     }
-    props.setBgColor(color);
   }
 
   const handleMouseLeave = () => {
-    setAbout(false);
-    setProjects(false);
-    setContacts(false);
-    props.setBgColor('white');
+    if (clicked === 0) {
+      setAbout(false);
+      setProjects(false);
+      setContacts(false);
+      props.setBgColor('white');
+    }
   }
 
   const aboutStyle = useSpring({
@@ -90,6 +96,12 @@ export default function Navbar(props) {
   const contactsHoverStyle = useSpring({
     color: hoverContacts ? '#000' : '#FFF',
   })
+
+  const handleAboutClick = () => {
+    setClicked(1);
+    setOpen(false);
+    props.setTagline(false);
+  }
 
 
 
@@ -140,6 +152,7 @@ export default function Navbar(props) {
           style={{...aboutStyle, ...aboutHoverStyle}}
           onMouseEnter={() => handleMouseEnter('red')}
           onMouseLeave={() => handleMouseLeave()}
+          onClick={() => handleAboutClick()}
         >
             about
         </animated.p>
