@@ -49,6 +49,7 @@ function App() {
   const [showAbout, setAbout] = useState(false);
   const renderAbout = () => {
     if (showAbout) {
+      console.log("You rendered About")
       return <About />
     } else return null
   }
@@ -61,7 +62,7 @@ function App() {
 
       <Tagline bgColor={bgColor} showTagline={showTagline} setAbout={setAbout} />
 
-      {renderAbout()}
+      {renderAbout}
 
       <animated.img
         src={bgBlack}

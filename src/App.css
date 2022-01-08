@@ -134,9 +134,8 @@ body {
 
 .tagline-cntr {
   position: relative;
-  display: grid;
-  grid-template-columns: 22% 78%;
-  width: 55%;
+  display: block;
+  width: 50%;
   height: auto;
   margin: 46vh 0 0 4rem;
   font-family: 'Graphik Bold';
@@ -146,13 +145,10 @@ body {
 }
 
 .tagline-hello {
-  grid-column: 1/2;
   grid-row: 1/2;
 }
 
 .tagline-desc {
-  grid-column: 2/3;
-  grid-row: 1/2;
   font-family: 'Graphik Regular';
 }
 
@@ -161,10 +157,9 @@ body {
 }
 
 .tagline-subdesc {
-  grid-column: 2/3;
-  grid-row: 2/2;
+  width: 65%;
   margin-top: 1rem;
-  padding: 1.4rem 1rem 0 1rem;
+  padding-top: 1.4rem;
   border-top: solid 1px #5F5F5F;
   justify-self: center;
   font-family: 'Graphik Regular';
