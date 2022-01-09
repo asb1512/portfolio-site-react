@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import { useTransition, useSpring, animated, config } from 'react-spring'
+import { useTransition, useSpring, animated, config } from 'react-spring';
 import Navbar from './Navbar';
 import Tagline from './Tagline';
 import About from './About';
@@ -24,11 +24,8 @@ function App() {
     config: config.wobbly,
     onRest: () => {
       set(true);
-      setToggle(true);
     },
   });
-
-  const [toggle, setToggle] = useState(false);
 
   const [showTagline, setTagline] = useState(true);
 
