@@ -154,22 +154,22 @@ export default function Navbar(props) {
         <animated.p 
           style={{...aboutStyle, ...aboutHoverStyle}}
           onMouseEnter={() => handleMouseEnter('red')}
-          onMouseLeave={() => handleMouseLeave()}
-          onClick={() => handleAboutClick()}
+          onMouseLeave={handleMouseLeave}
+          onClick={handleAboutClick}
         >
             about
         </animated.p>
         <animated.p 
           style={{...projectsStyle, ...projectsHoverStyle}}
           onMouseEnter={() => handleMouseEnter('gray')}
-          onMouseLeave={() => handleMouseLeave()}
+          onMouseLeave={handleMouseLeave}
         >
             projects
         </animated.p>
         <animated.p 
           style={{...contactsStyle, ...contactsHoverStyle}}
           onMouseEnter={() => handleMouseEnter('black')}
-          onMouseLeave={() => handleMouseLeave()}
+          onMouseLeave={handleMouseLeave}
         >
             contacts
         </animated.p>
