@@ -14,6 +14,9 @@ nav {
 
 .nav-left {
   margin-left: 4rem;
+  padding: .5rem 1.2rem .5rem 1rem;
+  border: none;
+  border-radius: 1000px;
   backdrop-filter: blur( 15px );
   -webkit-backdrop-filter: blur( 15px );
 }
@@ -45,7 +48,7 @@ nav {
   overflow: hidden;
 }
 
-.menu-options > p {
+.nav-expanded-option {
   cursor: pointer;
 }
 

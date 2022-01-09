@@ -155,6 +155,7 @@ export default function Navbar(props) {
       <div className='nav-expanded'>
         <animated.p 
           style={{...aboutStyle, ...aboutHoverStyle}}
+          className='nav-expanded-option'
           onMouseEnter={() => handleMouseEnter('red')}
           onMouseLeave={handleMouseLeave}
           onClick={handleAboutClick}
@@ -163,6 +164,7 @@ export default function Navbar(props) {
         </animated.p>
         <animated.p 
           style={{...projectsStyle, ...projectsHoverStyle}}
+          className='nav-expanded-option'
           onMouseEnter={() => handleMouseEnter('gray')}
           onMouseLeave={handleMouseLeave}
         >
@@ -170,6 +172,7 @@ export default function Navbar(props) {
         </animated.p>
         <animated.p 
           style={{...contactsStyle, ...contactsHoverStyle}}
+          className='nav-expanded-option'
           onMouseEnter={() => handleMouseEnter('black')}
           onMouseLeave={handleMouseLeave}
         >

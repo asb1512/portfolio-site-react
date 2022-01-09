@@ -1,9 +1,9 @@
 import './App.css';
 import React, { useState } from 'react';
 import { useTransition, useSpring, animated, config } from 'react-spring';
-import Navbar from './Navbar';
-import Tagline from './Tagline';
-import About from './About';
+import Navbar from './components/Navbar';
+import Tagline from './components/Tagline';
+import About from './components/About';
 
 import bgWhite from './images/mountains-white.jpg';
 import bgRed from './images/mountains-red.jpg';
