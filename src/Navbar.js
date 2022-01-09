@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Navbar.css';
+
 import Hamburger from 'hamburger-react';
 import { useSpring, animated } from 'react-spring';
 
@@ -108,8 +110,8 @@ export default function Navbar(props) {
 
   return (
     <header>
-      <div className='navbar'>
-        <animated.div className='navbar-left' style={nameStyle}>
+      <nav>
+        <animated.div className='nav-left' style={nameStyle}>
           ANDREW BOURGEOIS <animated.span style={fullStackStyle}>full-stack developer</animated.span>
         </animated.div>
 
@@ -119,8 +121,9 @@ export default function Navbar(props) {
           onClick={() => props.setMenu(true)}
           color={isOpen ? "#fff" : "#000"}
         />
-      </div>
+      </nav>
 
+      {/* –––expanded-menu circle SVG––– */}
       <animated.svg
         viewBox="-25 25 100 100"
         xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +151,7 @@ export default function Navbar(props) {
       </animated.svg>
 
 
-
+      {/* ---nav options when hamburger is clicked--- */}
       <div className='nav-expanded'>
         <animated.p 
           style={{...aboutStyle, ...aboutHoverStyle}}
