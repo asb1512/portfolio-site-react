@@ -107,7 +107,7 @@ export default function Navbar(props) {
 
 
   return (
-    <>
+    <header>
       <div className='navbar'>
         <animated.div className='navbar-left' style={nameStyle}>
           ANDREW BOURGEOIS <animated.span style={fullStackStyle}>full-stack developer</animated.span>
@@ -117,7 +117,6 @@ export default function Navbar(props) {
           toggled={isOpen}
           toggle={setOpen}
           onClick={() => props.setMenu(true)}
-          className="hamburger"
           color={isOpen ? "#fff" : "#000"}
         />
       </div>
@@ -150,7 +149,7 @@ export default function Navbar(props) {
 
 
 
-      <div className='menu-options'>
+      <div className='nav-expanded'>
         <animated.p 
           style={{...aboutStyle, ...aboutHoverStyle}}
           onMouseEnter={() => handleMouseEnter('red')}
@@ -174,6 +173,6 @@ export default function Navbar(props) {
             contacts
         </animated.p>
       </div>
-    </>
+    </header>
   )
 }
