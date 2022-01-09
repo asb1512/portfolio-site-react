@@ -3,6 +3,8 @@ import './About.css';
 
 import { useTransition, animated, config } from 'react-spring';
 
+import img from '../images/about.png';
+
 
 
 export default function About() {
@@ -44,6 +46,14 @@ export default function About() {
       <p>
         Isn't it funny that as we age, despite our best efforts, we end up becoming more and more like out parents. My mother, an artist and graphic designer and my father, a teacher.
       </p>
+
+      <div className='about-img-cntr'>
+        <img
+          src={img}
+          alt="Andrew Bourgeois, full-stack developer"
+          className='about-img'
+        />
+      </div>
     </animated.div>
   )
 }
