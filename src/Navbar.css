@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  inset: 0;
+  width: auto;
+  height: 10%;
+  z-index: 30;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 100%;
+}
+
+.navbar-left > span {
+  font-weight: 200;
+}
+
+.navbar-left {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: stretch;
+  align-self: stretch;
+  margin-left: 2rem;
+  text-align: left;
+  backdrop-filter: blur( 15px );
+  -webkit-backdrop-filter: blur( 15px );
+}
+
+.hamburger-react {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  z-index: 20;
+}
+
+.circle {
+  position: absolute;
+  z-index: 10;
+}
+
+.nav-expanded {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5% 5% 0 0;
+  z-index: 10;
+  font-family: 'Graphik Bold';
+  font-size: 4rem;
+  line-height: .5rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.menu-options > p {
+  cursor: pointer;
+}
+
+
+
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (max-width: 1600px) {
+  .menu-options {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .menu-options {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .navbar {
+    margin-top: 1rem;
+  }
+
+  .menu-options {
+    font-size: 2.7rem;
+    margin: 5% 5% 0 0;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .menu-options {
+    font-size: 2.2rem;
+  }
+}
