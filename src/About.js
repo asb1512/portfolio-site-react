@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './About.css';
+
+import { useTransition, animated, config } from 'react-spring';
 
 
 
 export default function About() {
-  return (
-    <div className='about-cntr'>
-      <h1>about</h1>
+
+  const [show, set] = useState(false);
+  const transitions = useTransition(show, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    reverse: show,
+    delay: 0,
+    config: config.wobbly,
+    onRest: () => {
+      set(true);
+    },
+  });
+
+
+  return transitions(
+    (styles, item) => item && <animated.div style={styles} className='about-cntr'>
+      <h1>about.</h1>
 
       <p>
         Hi, I'm Andrew. I love creating web experiences that are beautiful, functional and reliable.
@@ -27,6 +44,6 @@ export default function About() {
       <p>
         Isn't it funny that as we age, despite our best efforts, we end up becoming more and more like out parents. My mother, an artist and graphic designer and my father, a teacher.
       </p>
-    </div>
+    </animated.div>
   )
 }
