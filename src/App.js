@@ -47,22 +47,26 @@ function App() {
   })
 
   const [showAbout, setAbout] = useState(false);
-  const renderAbout = () => {
-    if (showAbout) {
-      console.log("You rendered About")
-      return <About />
-    } else return null
-  }
 
 
 
   return transitions(
     (styles, item) => item && <animated.div style={styles} className="App">
-      <Navbar setBgColor={setBgColor} setTagline={setTagline} />
 
-      <Tagline bgColor={bgColor} showTagline={showTagline} setAbout={setAbout} />
+      <Navbar 
+        setBgColor={setBgColor} 
+        setTagline={setTagline} 
+        setAbout={setAbout}
+      />
 
-      {renderAbout}
+      <div className='content-cntr'>
+        {showAbout ? <About /> : null}
+      </div>
+
+      <Tagline 
+        bgColor={bgColor} 
+        showTagline={showTagline}
+      />
 
       <animated.img
         src={bgBlack}
