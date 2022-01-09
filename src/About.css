@@ -1,5 +1,21 @@
 .about-cntr {
   position: relative;
+  display: block;
+  width: 50%;
+  margin: 7rem auto 0 auto;
   z-index: 25;
+  overflow-y: auto;
   font-family: 'Graphik Bold';
+  font-size: 2rem;
+}
+
+.about-cntr > h1 {
+  color: #000;
+}
+
+.about-cntr > p {
+  font-family: 'Graphik Regular';
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: #FFF;
 }
