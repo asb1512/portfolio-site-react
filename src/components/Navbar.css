@@ -19,6 +19,7 @@ nav {
   border-radius: 1000px;
   backdrop-filter: blur( 15px );
   -webkit-backdrop-filter: blur( 15px );
+  cursor: pointer;
 }
 
 .nav-left > span {
@@ -44,7 +45,7 @@ nav {
   font-family: 'Graphik Bold';
   font-size: 4rem;
   line-height: .5rem;
-  color: #fff;
+  color: #FFF;
   overflow: hidden;
 }
 
