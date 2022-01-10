@@ -4,6 +4,8 @@ import { useTransition, useSpring, animated, config } from 'react-spring';
 import Navbar from './components/Navbar';
 import Tagline from './components/Tagline';
 import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 import bgWhite from './images/mountains-white.jpg';
 import bgRed from './images/mountains-red.jpg';
@@ -44,6 +46,8 @@ function App() {
   })
 
   const [showAbout, setAbout] = useState(false);
+  const [showProjects, setProjects] = useState(false);
+  const [showContact, setContact] = useState(false);
 
 
 
@@ -54,10 +58,14 @@ function App() {
         setBgColor={setBgColor} 
         setTagline={setTagline} 
         setAbout={setAbout}
+        setProjects={setProjects}
+        setContact={setContact}
       />
 
       <div className='content-cntr'>
         {showAbout ? <About /> : null}
+        {showProjects ? <Projects /> : null}
+        {showContact ? <Contact /> : null}
       </div>
 
       <Tagline 

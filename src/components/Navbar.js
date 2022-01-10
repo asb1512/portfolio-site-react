@@ -99,11 +99,38 @@ export default function Navbar(props) {
     color: hoverContacts ? '#000' : '#FFF',
   })
 
+  const handleHomeClick = () => {
+    setClicked(0);
+    setOpen(false);
+    props.setTagline(true);
+    props.setAbout(false);
+    props.setProjects(false);
+    props.setContact(false);
+    props.setBgColor('white');
+  }
   const handleAboutClick = () => {
     setClicked(1);
     setOpen(false);
     props.setTagline(false);
     props.setAbout(true);
+    props.setProjects(false);
+    props.setContact(false);
+  }
+  const handleProjectsClick = () => {
+    setClicked(1);
+    setOpen(false);
+    props.setTagline(false);
+    props.setAbout(false);
+    props.setProjects(true);
+    props.setContact(false);
+  }
+  const handleContactClick = () => {
+    setClicked(1);
+    setOpen(false);
+    props.setTagline(false);
+    props.setAbout(false);
+    props.setProjects(false);
+    props.setContact(true);
   }
 
 
@@ -111,7 +138,11 @@ export default function Navbar(props) {
   return (
     <header>
       <nav>
-        <animated.div className='nav-left' style={nameStyle}>
+        <animated.div 
+          className='nav-left' 
+          style={nameStyle}
+          onClick={handleHomeClick}
+        >
           ANDREW BOURGEOIS <animated.span style={fullStackStyle}>full-stack developer</animated.span>
         </animated.div>
 
@@ -167,6 +198,7 @@ export default function Navbar(props) {
           className='nav-expanded-option'
           onMouseEnter={() => handleMouseEnter('gray')}
           onMouseLeave={handleMouseLeave}
+          onClick={handleProjectsClick}
         >
             projects
         </animated.p>
@@ -175,6 +207,7 @@ export default function Navbar(props) {
           className='nav-expanded-option'
           onMouseEnter={() => handleMouseEnter('black')}
           onMouseLeave={handleMouseLeave}
+          handle={handleContactClick}
         >
             contacts
         </animated.p>
