@@ -40,7 +40,7 @@ export default function About() {
       </p>
 
       <p>
-        After some time, I ended up at a digiat marketing startup and quickly fell into graphic design.
+        After some time, I ended up at a digital marketing startup and quickly fell into graphic design.
       </p>
 
       <p>
