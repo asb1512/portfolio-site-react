@@ -45,11 +45,6 @@
 
 
 /* Class-based */
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 .App {
   width: 100%;
   height: 100%;
@@ -81,8 +76,9 @@ body {
 }
 
 .tagline-cntr {
-  position: relative;
+  position: absolute;
   display: block;
+  inset: 0;
   width: 50%;
   height: auto;
   margin: 46vh 0 0 4rem;
@@ -113,6 +109,14 @@ body {
   font-family: 'Graphik Regular';
   font-size: 1.5rem;
   letter-spacing: 15px;
+}
+
+.content-cntr {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
 }
 
 @media only screen and (max-width: 1300px) {
