@@ -115,6 +115,7 @@ export default function Navbar(props) {
     props.setAbout(true);
     props.setProjects(false);
     props.setContact(false);
+    props.setBgColor('red');
   }
   const handleProjectsClick = () => {
     setClicked(1);
@@ -123,6 +124,7 @@ export default function Navbar(props) {
     props.setAbout(false);
     props.setProjects(true);
     props.setContact(false);
+    props.setBgColor('gray');
   }
   const handleContactClick = () => {
     setClicked(1);
@@ -131,6 +133,7 @@ export default function Navbar(props) {
     props.setAbout(false);
     props.setProjects(false);
     props.setContact(true);
+    props.setBgColor('black');
   }
 
 
@@ -207,7 +210,7 @@ export default function Navbar(props) {
           className='nav-expanded-option'
           onMouseEnter={() => handleMouseEnter('black')}
           onMouseLeave={handleMouseLeave}
-          handle={handleContactClick}
+          onClick={handleContactClick}
         >
             contacts
         </animated.p>
