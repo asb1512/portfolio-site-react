@@ -1,0 +1,40 @@
+.contact-cntr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: auto;
+  margin: auto auto;
+  z-index: 100;
+  background: transparent;
+  backdrop-filter: blur( 8px );
+  -webkit-backdrop-filter: blur( 8px );
+  border-radius: 10px;
+  border: none;
+  color: #FE3636;
+}
+
+.contact-option {
+  margin: auto;
+  fill: #5F5F5F;
+  transition: fill 300ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+}
+
+.contact-option:hover {
+  fill: #FFF;
+  transform: scale(1.04);
+}
+
+.contact-option:active {
+  fill: #000;
+}
+
+.github {
+  margin-right: 2rem;
+}
+
+.linkedin {
+  margin-left: 2rem;
+}
