@@ -24,7 +24,9 @@ export default function Projects() {
 
   return transitions(
     (styles, item) => item && <animated.div style={styles} className='projects-cntr'>
-      currently under construction...
+      <div className='projects-sub-cntr'>
+        
+      </div>
     </animated.div>
   )
 }
