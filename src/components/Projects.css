@@ -18,6 +18,7 @@
   justify-self: center;
   align-self: center;
   width: 90%;
+  margin: auto;
   transition: transform 300ms ease-in-out;
   cursor: pointer;
 }
@@ -46,4 +47,24 @@
 .wtp-wine {
   grid-column: 2/3;
   grid-row: 2/3;
+}
+
+@media only screen and (max-width: 500px) {
+  .projects-cntr {
+    width: 100%;
+    margin-top: 45%;
+    overflow-y: scroll;
+  }
+
+  .projects-sub-cntr {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  .project-tile {
+    display: block;
+    width: 90%;
+    margin: 0 auto 1rem auto;
+  }
 }

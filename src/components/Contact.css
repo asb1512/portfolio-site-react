@@ -38,3 +38,23 @@
 .linkedin {
   margin-left: 2rem;
 }
+
+@media only screen and (max-width: 500px) {
+  .contact-cntr {
+    display: block;
+    width: 100%;
+  }
+
+  .contact-option {
+    width: 100%;
+  }
+
+  .github {
+    margin-bottom: 3rem;
+    margin-right: 0;
+  }
+
+  .linkedin {
+    margin-left: 0;
+  }
+}

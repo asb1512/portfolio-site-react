@@ -88,10 +88,6 @@
   z-index: 20;
 }
 
-.tagline-hello {
-  grid-row: 1/2;
-}
-
 .tagline-desc {
   font-family: 'Graphik Regular';
 }
@@ -108,6 +104,7 @@
   justify-self: center;
   font-family: 'Graphik Regular';
   font-size: 1.5rem;
+  line-height: 2rem;
   letter-spacing: 15px;
 }
 
@@ -123,5 +120,19 @@
   .home-bg {
     width: auto;
     height: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tagline-cntr {
+    top: 35vh;
+    width: auto;
+    margin: 0 0 0 1rem;
+  }
+
+  .tagline-subdesc {
+    padding-top: 1.1rem;
+    font-size: 1rem;
+    letter-spacing: 5px;
   }
 }

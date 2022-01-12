@@ -30,3 +30,19 @@
   margin: auto;
   padding: 4rem 0 7rem 0;
 }
+
+@media only screen and (max-width: 500px) {
+  .about-cntr {
+    width: 85%;
+  }
+
+  .about-content {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .about-img {
+    width: 60%;
+    padding: 2rem 0 2rem 0;
+  }
+}
