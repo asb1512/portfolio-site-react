@@ -212,7 +212,7 @@ export default function Navbar(props) {
           onMouseLeave={handleMouseLeave}
           onClick={handleContactClick}
         >
-            contacts
+            contact
         </animated.p>
       </div>
     </header>
