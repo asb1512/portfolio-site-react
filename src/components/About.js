@@ -41,7 +41,7 @@ export default function About() {
           Upon returning to the US, I was given to the opportunity to pursue graphic design at digital marketing startup. I grew to love the arts, typography and the importance of simple, elegant design.
         </p>
 
-        <p>Full-stack web development gives me the opportunity to use both, while using critical thinking and problem solving skills to arrive at real-world solutions.</p>
+        <p className="about-content">Full-stack web development gives me the opportunity to use both, while using critical thinking and problem solving skills to arrive at real-world solutions.</p>
 
         <div className='about-img-cntr'>
           <img
