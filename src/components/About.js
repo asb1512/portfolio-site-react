@@ -38,16 +38,10 @@ export default function About() {
         </p>
 
         <p className="about-content">
-          After my time abroad, I realized that I didn't want to pursue a career in academia and began to search for other opportunities. 
+          Upon returning to the US, I was given to the opportunity to pursue graphic design at digital marketing startup. I grew to love the arts, typography and the importance of simple, elegant design.
         </p>
 
-        <p className="about-content">
-          After some time, I ended up at a digital marketing startup and quickly fell into graphic design.
-        </p>
-
-        <p className="about-content">
-          Isn't it funny that as we age, despite our best efforts, we end up becoming more and more like out parents. My mother, an artist and graphic designer and my father, a teacher.
-        </p>
+        <p>Full-stack web development gives me the opportunity to use both, while using critical thinking and problem solving skills to arrive at real-world solutions.</p>
 
         <div className='about-img-cntr'>
           <img
