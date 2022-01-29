@@ -34,6 +34,7 @@
 @media only screen and (max-width: 500px) {
   .about-cntr {
     width: 85%;
+    margin: 60% auto 0 auto;
   }
 
   .about-content {

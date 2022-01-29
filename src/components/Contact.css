@@ -6,7 +6,7 @@
   width: 40%;
   height: auto;
   margin: auto auto;
-  z-index: 100;
+  z-index: 35;
   background: transparent;
   backdrop-filter: blur( 8px );
   -webkit-backdrop-filter: blur( 8px );
