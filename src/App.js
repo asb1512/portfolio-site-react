@@ -16,6 +16,9 @@ import bgBlack from './images/mountains-black.jpg';
 
 function App() {
 
+  // sets window width to account for screen size
+  let screenWidth = window.innerWidth;
+
   const [show, set] = useState(false);
   const transitions = useTransition(show, {
     from: { opacity: 0 },
@@ -55,6 +58,7 @@ function App() {
     (styles, item) => item && <animated.div style={styles} className="App">
 
       <Navbar 
+        screenWidth={screenWidth}
         setBgColor={setBgColor} 
         setTagline={setTagline} 
         setAbout={setAbout}
