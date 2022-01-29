@@ -52,7 +52,7 @@
 @media only screen and (max-width: 500px) {
   .projects-cntr {
     width: 100%;
-    margin-top: 45%;
+    margin-top: 35%;
     overflow-y: scroll;
   }
 
