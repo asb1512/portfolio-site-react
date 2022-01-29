@@ -24,10 +24,10 @@ export default function Navbar(props) {
   const fullStackStyle = useSpring({
     color: hoverContacts ? '#FFF' : '#000',
   })
+  const menuContainerStyle = useSpring({
+    transform: isOpen ? 'translate(0px, 0px)' : 'translate(0px, -1500px)',
+  });
   const circleMenuStyle = useSpring({
-    top: isOpen ? '0' : '-100',
-    right: isOpen ? '0' : '-100',
-    width: isOpen ? '35%' : '5%',
     fill: 'url(#grad)'
   })
 
@@ -157,64 +157,69 @@ export default function Navbar(props) {
         />
       </nav>
 
-      {/* –––expanded-menu circle SVG––– */}
-      <animated.svg
-        viewBox="-25 25 100 100"
-        xmlns="http://www.w3.org/2000/svg"
-        className='circle'
-        style={circleMenuStyle}
+
+      <animated.div 
+        className='menu-cntr'
+        style={menuContainerStyle}
       >
-        <defs>
-          <linearGradient 
-            id="grad" 
-            x1="0%" 
-            y1="0%" 
-            x2="100%" 
-            y2="0%"
+        {/* –––expanded-menu circle SVG––– */}
+        <animated.svg
+          viewBox="-25 25 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+          className='circle'
+          style={circleMenuStyle}
+        >
+          <defs>
+            <linearGradient 
+              id="grad" 
+              x1="0%" 
+              y1="0%" 
+              x2="100%" 
+              y2="0%"
+            >
+              <stop offset="0%" stopColor='rgba(70,70,70,.75)' stopOpacity='1' />
+              <stop offset="100%" stopColor='rgba(0,0,0,.75)' stopOpacity='1'/>
+            </linearGradient>
+          </defs>
+          <circle
+            cx="50"
+            cy="50"
+            r="74"
+          />
+        </animated.svg>
+
+
+        {/* ---nav options when hamburger is clicked--- */}
+        <div className='nav-expanded'>
+          <animated.p 
+            style={{...aboutStyle, ...aboutHoverStyle}}
+            className='nav-expanded-option'
+            onMouseEnter={() => handleMouseEnter('red')}
+            onMouseLeave={handleMouseLeave}
+            onClick={handleAboutClick}
           >
-            <stop offset="0%" stopColor='rgba(70,70,70,.75)' stopOpacity='1' />
-            <stop offset="100%" stopColor='rgba(0,0,0,.75)' stopOpacity='1'/>
-          </linearGradient>
-        </defs>
-        <circle
-          cx="50"
-          cy="50"
-          r="50"
-          
-        />
-      </animated.svg>
-
-
-      {/* ---nav options when hamburger is clicked--- */}
-      <div className='nav-expanded'>
-        <animated.p 
-          style={{...aboutStyle, ...aboutHoverStyle}}
-          className='nav-expanded-option'
-          onMouseEnter={() => handleMouseEnter('red')}
-          onMouseLeave={handleMouseLeave}
-          onClick={handleAboutClick}
-        >
-            about
-        </animated.p>
-        <animated.p 
-          style={{...projectsStyle, ...projectsHoverStyle}}
-          className='nav-expanded-option'
-          onMouseEnter={() => handleMouseEnter('gray')}
-          onMouseLeave={handleMouseLeave}
-          onClick={handleProjectsClick}
-        >
-            projects
-        </animated.p>
-        <animated.p 
-          style={{...contactsStyle, ...contactsHoverStyle}}
-          className='nav-expanded-option'
-          onMouseEnter={() => handleMouseEnter('black')}
-          onMouseLeave={handleMouseLeave}
-          onClick={handleContactClick}
-        >
-            contact
-        </animated.p>
-      </div>
+              about
+          </animated.p>
+          <animated.p 
+            style={{...projectsStyle, ...projectsHoverStyle}}
+            className='nav-expanded-option'
+            onMouseEnter={() => handleMouseEnter('gray')}
+            onMouseLeave={handleMouseLeave}
+            onClick={handleProjectsClick}
+          >
+              projects
+          </animated.p>
+          <animated.p 
+            style={{...contactsStyle, ...contactsHoverStyle}}
+            className='nav-expanded-option'
+            onMouseEnter={() => handleMouseEnter('black')}
+            onMouseLeave={handleMouseLeave}
+            onClick={handleContactClick}
+          >
+              contact
+          </animated.p>
+        </div>
+      </animated.div>
     </header>
   )
 }
